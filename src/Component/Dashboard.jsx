@@ -1,6 +1,6 @@
 import Guardian from "../assets/guardian.png";
 import Person from "../assets/person.jpg";
-import { FaUserShield, FaBell, FaChalkboardTeacher } from "react-icons/fa";
+import { FaUserShield, FaBell, FaChalkboardTeacher, FaUserGraduate } from "react-icons/fa";
 
 function Card({ children, background }) {
   return (
@@ -19,7 +19,7 @@ function CardContent({ children }) {
 
 export default function Dashboard() {
   return (
-    <div className="bg-gradient-to-r from-indigo-50 to-purple-100 p-10 min-h-screen  rounded-2xl   font-sans">
+    <div className="bg-gradient-to-r from-indigo-50 to-purple-100 p-10 min-h-screen rounded-2xl font-sans">
       <div className="bg-white rounded-3xl shadow-2xl p-8 flex items-center gap-6 mb-10">
         <img
           src={Person}
@@ -27,37 +27,28 @@ export default function Dashboard() {
           className="w-24 h-24 rounded-full object-cover border-4 border-indigo-300"
         />
         <div className="flex flex-col space-y-2">
-          <h3 className="text-2xl font-bold text-indigo-900">
-            Aniruddh Shrivastava
-          </h3>
-          <div className="flex flex-row gap-7">
-            <p className="text-md text-gray-600">
-              <strong>ID:</strong> 2020-2024
-            </p>
-            <p className="text-md text-gray-600">
-              <strong>Number:</strong> +91-8349329424
-            </p>
-            <p className="text-md text-gray-600">
-              <strong>Email:</strong> ux.aniruddh@gmail.com
-            </p>
-            <p className="text-md text-gray-600">
-              <strong>Address:</strong> Bangalore
-            </p>
+          <h3 className="text-2xl font-bold text-indigo-900">Aniruddh Shrivastava</h3>
+          <div className="grid grid-cols-2 gap-4 text-md text-gray-600">
+            <p><strong>ID:</strong> 2020-2024</p>
+            <p><strong>Phone Number:</strong> +91-8349329424</p>
+            <p><strong>Email:</strong> ux.aniruddh@gmail.com</p>
+            <p><strong>Degree Program:</strong> Bachelor of Technology</p>
+            <p><strong>Discipline:</strong> Computer Science</p>
+            <p><strong>Join Date:</strong> 01-Aug-2020</p>
           </div>
         </div>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-
         <Card background="linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%)">
           <CardContent>
             <h3 className="text-xl font-semibold text-indigo-800 flex items-center gap-2">
               <FaUserShield className="text-indigo-600" /> Guardian Data
             </h3>
-            <p>Email: aniruddh@gmail.com</p>
+            <p>Email: guardian@example.com</p>
             <p>Phone: 9876543210</p>
-            <p>Alt Email: anirudddh@gmail.com</p>
-            <p>Address: Bangalore</p>
+            <p>Alt Email: alt@example.com</p>
+            <p>Address: Bangalore, India</p>
           </CardContent>
           <img
             src={Guardian}
@@ -67,21 +58,21 @@ export default function Dashboard() {
         </Card>
         <Card background="linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%)">
           <CardContent>
-            <h3 className="text-xl font-semibold text-indigo-800 flex items-center gap-2">
+            <h3 className="text-xl font-semibold text-white flex items-center gap-2">
               <FaBell className="text-white" /> Admin Notifications
             </h3>
-            <p className="text-white font-semibold">
-              Fees Payment Due: 30 June 2025
-            </p>
+            <p className="text-white font-semibold">Fees Payment Due: 30 June 2025</p>
             <p className="text-white font-semibold">Upload Aadhar: Pending</p>
+            <p className="text-white font-semibold">Last Date to Submit: 28 June 2025</p>
           </CardContent>
         </Card>
+
         <Card background="linear-gradient(135deg, #c2e9fb 0%, #a1c4fd 100%)">
           <CardContent>
             <h3 className="text-xl font-semibold text-blue-900 flex items-center gap-2">
-              <FaChalkboardTeacher className="text-blue-800" /> Teacher's Data
+              <FaChalkboardTeacher className="text-blue-800" /> Teacher’s Data
             </h3>
-            <p>Data will be displayed here...</p>
+            <p className="text-blue-800">Coming Soon...</p>
           </CardContent>
         </Card>
       </div>
